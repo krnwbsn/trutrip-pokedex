@@ -4,7 +4,7 @@ import { defaultPageTitle } from '@utils/constant';
 import Layout from '@components/Layout';
 import Information from '@components/Information';
 
-const Offline = () => (
+const OfflinePage = () => (
   <>
     <Head>
       <title key="page-title">{defaultPageTitle}</title>
@@ -15,4 +15,4 @@ const Offline = () => (
     </Layout>
   </>
 );
-export default Offline;
+export default OfflinePage;

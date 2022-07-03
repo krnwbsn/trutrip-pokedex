@@ -1,6 +1,6 @@
 import React from 'react';
 import Images from 'next/image';
-import Loader from 'react-loader-spinner';
+import { Audio } from 'react-loader-spinner';
 import Link from 'next/link';
 
 import * as Styled from './styles';
@@ -25,7 +25,7 @@ const Component = ({ children, loading }: ILayout) => (
     <Styled.Content>
       {loading && (
         <Styled.LoadingContainer>
-          <Loader type="ThreeDots" color="#ffcb05" height={200} width={200} />
+          <Audio color="#ffcb05" height={200} width={200} />
         </Styled.LoadingContainer>
       )}
       <div>{children}</div>

@@ -6,6 +6,7 @@ import ProgressBar from '@components/ProgressBar';
 import Link from 'next/link';
 import Badge from '@components/Badge';
 import type { IType } from '@interfaces/itype';
+import { useDispatch } from '@context/provider';
 import type { IKeyValue } from '@interfaces/ikeyvalue';
 
 interface IPokemonDetails {
@@ -36,9 +37,28 @@ const PokemonDetails = ({
   abilities,
 }: IPokemonDetails) => {
   const [menu, setMenu] = useState(menus[0].key);
+  const Dispatch = useDispatch();
+  const pokemonColor = types[0].color;
+
+  const handleCatch = () => {
+    setTimeout(() => {
+      return Dispatch({
+        type: 'SET_MY_POKEMON',
+        payload: [
+          {
+            color: pokemonColor,
+            name: pokemonName,
+            pokemonId,
+            id,
+            types,
+          },
+        ],
+      });
+    }, 1000);
+  };
 
   return (
-    <Styled.Container color="#fff111" key={id}>
+    <Styled.Container color={pokemonColor} key={id}>
       <Link href="/">
         <Styled.Nav>
           <Images
@@ -47,6 +67,15 @@ const PokemonDetails = ({
             height="16px"
             alt="Arrow Left"
           />
+          <Styled.Catch onClick={handleCatch}>
+            <Images
+              src="/icon-192x192.png"
+              width="37px"
+              height="37px"
+              alt="Pokemon ball"
+            />
+            <span>Catch!</span>
+          </Styled.Catch>
         </Styled.Nav>
       </Link>
       <Styled.PokemonId>{pokemonId}</Styled.PokemonId>

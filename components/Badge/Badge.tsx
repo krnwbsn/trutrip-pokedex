@@ -3,7 +3,7 @@ import * as Styled from './styles';
 import type { IType } from '@interfaces/itype';
 
 interface IBadge {
-  types: IType[];
+  types?: IType[];
 }
 
 const Badge = ({ types }: IBadge) => (

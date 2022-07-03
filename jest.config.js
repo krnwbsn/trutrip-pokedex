@@ -20,6 +20,7 @@ module.exports = {
     '^@interfaces/(.*)': '<rootDir>/interfaces/$1',
     '^@containers/(.*)': '<rootDir>/containers/$1',
     '^@styles/(.*)': '<rootDir>/styles/$1',
+    '^@context/(.*)': '<rootDir>/context/$1',
     '\\.(css|less)$': 'identity-obj-proxy',
   },
 };

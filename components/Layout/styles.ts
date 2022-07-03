@@ -36,3 +36,20 @@ export const LoadingContainer = styled.div`
     z-index: 9;
   }
 `;
+
+export const MyPokemon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  border: 1px solid #e4000f;
+  border-radius: 12px;
+  padding: 8px 12px;
+
+  span {
+    margin-left: 12px;
+    font-size: 12px;
+  }
+`;

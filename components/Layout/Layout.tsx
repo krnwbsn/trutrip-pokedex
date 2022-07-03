@@ -21,6 +21,19 @@ const Component = ({ children, loading }: ILayout) => (
           height="57px"
         />
       </Link>
+      <div>
+        <Link href="/my-pokemon">
+          <Styled.MyPokemon>
+            <Images
+              src="/icon-192x192.png"
+              alt="My Pokemon"
+              width="32px"
+              height="32px"
+            />
+            <span>My Pokemon</span>
+          </Styled.MyPokemon>
+        </Link>
+      </div>
     </Styled.Header>
     <Styled.Content>
       {loading && (

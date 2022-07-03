@@ -24,6 +24,7 @@ export const Nav = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  justify-content: space-between;
 `;
 
 export const PokemonName = styled.h2`
@@ -69,4 +70,14 @@ export const Details = styled.p`
 export const Header4 = styled.h4`
   margin: 8px 0px;
   font-size: 12px;
+`;
+
+export const Catch = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+  span {
+    font-size: 12px;
+  }
 `;

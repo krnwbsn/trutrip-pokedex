@@ -3,17 +3,7 @@ import Images from 'next/image';
 import * as Styled from './styles';
 import Link from 'next/link';
 import Badge from '@components/Badge';
-
-interface ICard {
-  color: string;
-  name: string;
-  pokemonId: string;
-  id: number;
-  types: {
-    color: string;
-    type: string;
-  }[];
-}
+import type { ICard } from '@interfaces/icard';
 
 const Component = ({ color, name, pokemonId, id, types }: ICard) => (
   <Link href={`/${name}`}>

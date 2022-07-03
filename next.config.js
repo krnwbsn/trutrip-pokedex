@@ -24,6 +24,7 @@ const nextConfig = withPWA({
     config.resolve.alias['@interfaces'] = path.join(__dirname, 'interfaces');
     config.resolve.alias['@styles'] = path.join(__dirname, 'styles');
     config.resolve.alias['@containers'] = path.join(__dirname, 'containers');
+    config.resolve.alias['@context'] = path.join(__dirname, 'context');
 
     return config;
   },

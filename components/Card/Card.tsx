@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Badge from '@components/Badge';
 import type { ICard } from '@interfaces/icard';
 
-const Component = ({ color, name, pokemonId, id, types }: ICard) => (
+const Card = ({ color, name, pokemonId, id, types }: ICard) => (
   <Link href={`/${name}`}>
     <Styled.Container color={color}>
       <Images
@@ -24,4 +24,4 @@ const Component = ({ color, name, pokemonId, id, types }: ICard) => (
   </Link>
 );
 
-export default Component;
+export default Card;

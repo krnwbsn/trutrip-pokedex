@@ -9,6 +9,10 @@ const nextConfig = withPWA({
     register: true,
     skipWaiting: true,
   },
+  optimizeFonts: false,
+  images: {
+    domains: ['raw.githubusercontent.com'],
+  },
   webpack(config, _options) {
     config.resolve.alias['@pages'] = path.join(__dirname, 'pages');
     config.resolve.alias['@components'] = path.join(__dirname, 'components');

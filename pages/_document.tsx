@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-
 import { defaultPageTitle, defaultMetaDescription } from '@utils/constant';
 
 class MyDocument extends Document {

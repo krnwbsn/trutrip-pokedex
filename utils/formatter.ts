@@ -6,17 +6,11 @@ export const getFormattedId = (id: number) => {
 
 export const getPokemonTypeColor = (pokemonType: string[]) => {
   if (pokemonType) {
-    const typeColor = pokemonTypeColor.filter(({ type }) =>
-      pokemonType.includes(type)
-    );
-
-    return typeColor;
+    return pokemonTypeColor.filter(({ type }) => pokemonType.includes(type));
   }
   return [];
 };
 
 export const formattedName = (name: string) => {
-  const updatedName = `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
-
-  return updatedName;
+  return `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
 };

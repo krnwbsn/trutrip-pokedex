@@ -1,13 +1,6 @@
 import { NextPage } from 'next';
+import OfflinePage from '@containers/OfflinePage';
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <main>
-        <p>You are offline, please connect to internet</p>
-      </main>
-    </div>
-  );
-};
+const Home: NextPage = () => <OfflinePage />;
 
 export default Home;

@@ -18,13 +18,13 @@
     "paths": {
       "@pages/*": ["./pages/*"],
       "@components/*": ["./components/*"],
-      "@utils/*": ["./utils/*"],
+      "@utils/*": ["src/utils/*"],
       "@interfaces/*": ["./interfaces/*"],
       "@styles/*": ["./styles/*"],
       "@containers/*": ["./containers/*"]
     },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "sonar-project.js"],
   "exclude": ["node_modules"]
 }

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "scan": "node sonar-project.js"
   },
   "dependencies": {
     "@apollo/client": "^3.4.17",
@@ -37,6 +38,7 @@
     "eslint": "7",
     "eslint-config-next": "12.0.3",
     "eslint-plugin-prettier": "^4.0.0",
+    "sonarqube-scanner": "^2.8.1",
     "typescript": "4.4.4"
   }
 }

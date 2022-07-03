@@ -38,16 +38,16 @@ const PokemonDetailsPage = () => {
     const pokemonTypes = pokemonDataDetails.pokemons[0].types.map(
       ({ type }: ITypes) => type.name
     );
-    const eggGroups = pokemonDataDetails.egg_groups
+    const eggGroupsValue = pokemonDataDetails.egg_groups
       .map(({ group }: IEggGroup) => group.name)
       .join(', ');
-    const stats = pokemonDataDetails.pokemons[0].stats.map(
+    const statsValue = pokemonDataDetails.pokemons[0].stats.map(
       ({ stat, base_stat }: IStats) => ({
         key: stat.name,
         value: base_stat,
       })
     );
-    const abilities = pokemonDataDetails.pokemons[0].abilities
+    const abilitiesValue = pokemonDataDetails.pokemons[0].abilities
       .map(({ ability }: IAbilities) => ability.name)
       .join(', ');
 
@@ -56,13 +56,13 @@ const PokemonDetailsPage = () => {
       pokemonId: getFormattedId(pokemonDataDetails.id),
       pokemonName: formattedName(pokemonDataDetails.name),
       description: pokemonDataDetails.description[0].flavor_text,
-      eggGroups,
+      eggGroups: eggGroupsValue,
       eggCycle: pokemonDataDetails.hatch_counter,
       height: pokemonDataDetails.pokemons[0].height,
       weight: pokemonDataDetails.pokemons[0].weight,
       types: getPokemonTypeColor(pokemonTypes),
-      stats,
-      abilities,
+      stats: statsValue,
+      abilities: abilitiesValue,
     };
   }
 
